@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'index'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'repo_trabajo_final.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r'/home/emanuel/Dropbox/Coderhouse/Curso Python/Django/repo_trabajo_final/index/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
