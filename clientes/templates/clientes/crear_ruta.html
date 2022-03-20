@@ -1,15 +1,12 @@
 {% extends 'index/nosotros.html' %}
 
 {% block 'body_aeroBikes'  %}
-        <form action="" method="get">
+        <form action="" method="post">
             {% csrf_token %}
             <table>
                 {{form.as_table}}
             </table>
-            <button>Buscar</button>
+            <button>Crear</button>
         <form> 
-            {% for corredor in corredores %}
-            <li>{{corredor}}</li>
-            
-            {% endfor %}
+
 {% endblock 'body_aeroBikes' %}

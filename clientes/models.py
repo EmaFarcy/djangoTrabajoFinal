@@ -18,3 +18,10 @@ class Corredor(models.Model):
     
     def __str__(self):
         return f' {self.nombre} {self.apellido}'
+
+class Ruta(models.Model):
+     marca = models.CharField(max_length=60)
+     modelo = models.CharField(max_length=60)
+     
+     def __str__(self):
+        return f' {self.marca} {self.modelo}'   
