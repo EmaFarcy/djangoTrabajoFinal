@@ -1,0 +1,15 @@
+{% extends 'index/index.html' %}
+
+{% block 'body_aeroBikes'  %}
+        <form action="" method="get">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <button>Buscar</button>
+        <form> 
+            {% for cicloturista in cicloturistas %}
+            <li>{{cicloturista}}</li>
+            
+            {% endfor %}
+{% endblock 'body_aeroBikes' %}

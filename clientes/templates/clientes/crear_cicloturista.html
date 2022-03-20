@@ -1,0 +1,12 @@
+{% extends 'index/index.html' %}
+
+{% block 'body_aeroBikes'  %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <button>Crear</button>
+        <form> 
+
+{% endblock 'body_aeroBikes' %}
