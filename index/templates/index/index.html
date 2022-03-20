@@ -31,19 +31,20 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href={% url 'nosotros' %}>
-                  <strong>Nosotros</strong>
+                  <strong>Clientes</strong>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href= {% url 'crear_cicloturista' %}>
-                  <strong>Crear Cicloturista</strong>
-                </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href={% url 'lista_cicloturistas' %}>
-                <strong>Lista Cicloturistas</strong>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">
+                <strong>Bike Shop</strong>
               </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <strong>Log In</strong>
+            </a>
+        </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
                   <strong>Contacto</strong>
@@ -52,7 +53,7 @@
         </ul>
     </nav>
 
-    {% block 'body_aeroBikes' %}
+
     
     
     <h1 class="py-0 my-1 border-top">Aero Bikes
@@ -174,7 +175,6 @@
         <img align="left" width="40%" class="aero6" src={% static "index/img/aerobikes6.jpg"%}><p>Los mejores mecánicos de Carlos Paz para el mantenimiento de tu bici.  Nos llena de orgullo poder ofrecerte lo mejor gracias a @specialized_arg.</p> 
     </div>
 
-    {% endblock 'body_aeroBikes' %}  
 
 <footer class="py-12 my-14 border-top">
     <ul class="nav col-md-12 justify-content-end">

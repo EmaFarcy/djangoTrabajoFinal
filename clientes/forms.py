@@ -7,5 +7,13 @@ class CicloturistaFormulario(forms.Form):
 
 class CicloturistaBusqueda(forms.Form):
     nombre= forms.CharField(max_length=20)
+
+class CorredorFormulario(forms.Form):
+    nombre = forms.CharField(max_length=20)
+    apellido = forms.CharField(max_length=50)
+    contado= forms.BooleanField(required=False)
+
+class CorredorBusqueda(forms.Form):
+    nombre= forms.CharField(max_length=20)
     
     
