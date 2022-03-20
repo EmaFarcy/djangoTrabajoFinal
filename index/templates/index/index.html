@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+      {% load static %}
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	    <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        </script>
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+        </script>
+        <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+        </script>
+	      <link href= {% static 'css/style.css' %} rel="stylesheet">
+	      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7e2bf41c0a.js" crossorigin="anonymous"></script>
+        <title>Aero Bikes</title>
+	</head>
+	<body>
+    <div class="container-md"  style="background-color: #828282;">
+		<nav class="navbar navbar-expand-sm bg-secondary.bg-gradient">
+			<a class="navbar-left" href= {% url 'index' %}><img class="aero" src= {% static "index/img/aerobikes.jpg"%}></a>
+  
+        <ul class="navbar-nav ml-auto" style="background-color: #828282">
+            <li class="nav-item">
+                <a class="nav-link ini" href= {% url 'index' %} style="color: white;">
+                  <strong>Inicio</strong>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={% url 'nosotros' %}>
+                  <strong>Nosotros</strong>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <strong>Shop</strong>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <strong>Contacto</strong>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    {% block 'body_aeroBikes' %}
+    
+    
+    <h1 class="py-0 my-1 border-top">Aero Bikes
+    	<small>Shop</small>
+
+    </h1>
+    <h2><i>Tienda oficial Specialized Bicycles</h2></i>
+    </h2>
+    <br>
+
+    <img class="aero2" src={% static "index/img/aerobikes2.jpg"%}>
+    <br>
+    <br>
+
+    <div style="text-align: center;">
+    <button type="button" class="btn btn-dark" style="margin: 10px;" >Ruta</button>
+    <button type="button" class="btn btn-dark" style="margin: 10px;">Mtb</button>
+    <button type="button" class="btn btn-dark" style="margin: 10px;">Urbanas</button>
+    </div>
+    <br>
+ </div>
+    <div class="container" style="background-color: #c3c3c3;">
+  <div class="row align-items-start">
+    <div class="col">
+        <br>
+        <div style="text-align: center;">
+        <i class="fas fa-map-marked-alt"></i>
+    </div>
+      <h3 style="text-align:center;"><small><strong>Tienda</strong></small></h3>
+      <p align="center">En nuestros local de la ciudad de Villa Carlos Paz podés encontrar toda la colección de bicicletas Specialized y elegir la tuya.</p>
+      <br>
+      <div style="text-align: center;">
+      <button type="button" class="btn btn-info">Leer más</button>
+      </div>
+    </div>
+    <div class="col">
+        <br>
+        <div style="text-align: center;">
+            <i class="fas fa-tshirt"></i>
+            </div>
+      <h3 style="text-align:center;"><small><strong>Indumentaria</strong></small></h3>
+      <p align="center">Encontrá la mejor indumentaria de ciclismo de las principales marcas de Argentina.</p>
+      <br>
+      <br>
+      <div style="text-align: center;">
+      <button type="button" class="btn btn-info">Leer más</button>
+      </div>
+    </div>
+    <div class="col">
+        <br>
+        <div style="text-align: center;">
+            <i class="fas fa-file-alt"></i>
+          </div>  
+      <h3 style="text-align:center;"><small><strong>Novedades</strong></small></h3>
+      <p align="center">Recibí por correo toda la info actualizada de nuevos ingresos y consejos para cuidar tu bicicleta.</p>
+      <br>
+      <br>
+      <div style="text-align: center;">
+      <button type="button" class="btn btn-info">Leer más</button>
+      </div>
+    </div>
+    <div class="col">
+        <br>
+        <div style="text-align: center;">
+            <i class="fas fa-users"></i>
+      <h3 style="text-align:center;"><small><strong>Staff</strong></small></h3>
+      <p align="center">Conocé a nuestros asesores especializados y formados por Specialized Argentina.</p>
+      <br>
+      <br>
+      <div style="text-align: center;">
+      <button type="button" class="btn btn-info">Leer más</button>
+    </div>
+    </div>
+    <br>
+    </div>
+    <div class="container" style="background-color:white;">
+  <div class="row align-items-start">
+    <div class="col">
+        <br>
+    <br>
+      <h5 align="center"><strong>Specialized en el circuito profesional</strong></h5>
+      <p align="center">Actualmente, el Bora-Hansgrohe y el Quick-Step Floors utilizan el modelo S-Works en el circuito UCI Pro Tour. El modelo S-Works es uno de los más buscados por los equipos profesionales.</p>
+    </div>
+    <div class="col">
+        <br>
+        <img align="center" width="100%" class="venge" src={% static "index/img/specialized1.jpg"%}>
+      <i align="center">Specialized Venge 2021</i>
+    </div>
+    <div class="col">
+        <br>
+        <img align="center" width="100%" class="sagan" src={% static "index/img/specialized2.jpg"%} height="170px">
+      <i align="center">Peter Sagan</i>
+    </div>
+    <div class="col">
+        <br>
+        <img align="center" width="100%" class="julian" src={% static "index/img/specialized3.jpg"%} height="170px">
+      <i align="center">Julian Alaphillipe</i>
+    </div>
+  </div>
+  <br>
+</div>
+     <div class="container py-0 my-1 border-top" style="background-color:white;">
+        <br>
+  <div class="row align-items-start">
+    <div class="col">
+        <br>
+    <br>
+      <h5 align="center" style="background-color: #c3c3c3"><strong>Equipo Aero Bikes</strong></h5>
+      <p align="center" style="background-color: #c3c3c3;"><i><p>Te invitamos a formar parte de los entrenamientos en ruta. Todos los jueves a las 13:30 hs, salimos desde nuestro local en Av. San Martín 1182.</i></p>
+    </div>
+    <div class="col">
+        <video src={% static "index/vid/aerobikes3.mp4"%} controls width="50%" align="center" ></video>
+    </div>
+    <div class="col">
+        <img align="left" width="40%" class="aero4" src={% static "index/img/aerobikes4.jpg"%}><p>La mejor indumentaria para las competiciones o para el cicloturismo según el interés del cliente.</p>
+        <br>
+        <br>
+        <br>
+        <img align="left" width="40%" class="aero6" src={% static "index/img/aerobikes6.jpg"%}><p>Los mejores mecánicos de Carlos Paz para el mantenimiento de tu bici.  Nos llena de orgullo poder ofrecerte lo mejor gracias a @specialized_arg.</p> 
+    </div>
+
+    {% endblock 'body_aeroBikes' %}  
+
+<footer class="py-12 my-14 border-top">
+    <ul class="nav col-md-12 justify-content-end">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Inicio</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Nosotros</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Shop</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact Us</a></li>
+          </ul>
+      </ul>
+    
+</footer>
+</body>
+</html>
