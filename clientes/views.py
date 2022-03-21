@@ -63,5 +63,5 @@ def crear_ruta(request):
             ruta= Ruta(marca= data['marca'], modelo=data['modelo'])
             ruta.save()
             return render(request, "index/index.html", {})
-        form= RutaFormulario()
-        return render(request, "clientes/crear_ruta.html", {'form': form})
+    form= RutaFormulario()
+    return render(request, "clientes/crear_ruta.html", {'form': form})
