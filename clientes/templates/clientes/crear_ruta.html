@@ -1,6 +1,8 @@
 {% extends 'index/nosotros.html' %}
 
 {% block 'body_aeroBikes'  %}
+<h5 class="productosRuta"> Ingresar producto: Bici de Ruta</h5>
+<br>
         <form action="" method="post">
             {% csrf_token %}
             <table>
@@ -8,6 +10,4 @@
             </table>
             <button>Crear</button>
         <form> 
-
-            <h2>Ingreso de productos: Bicicletas de Ruta</h2>          
 {% endblock 'body_aeroBikes' %}
