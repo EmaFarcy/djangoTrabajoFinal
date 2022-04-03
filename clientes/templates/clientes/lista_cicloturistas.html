@@ -1,15 +1,28 @@
 {% extends 'index/nosotros.html' %}
 
 {% block 'body_aeroBikes'  %}
+
+        <p>
+            <a href={% url 'nosotros'%}>Volver</a>
+        </p>
+
+
+        <p>
+            <a href={% url 'crear_cicloturista'%}>Crear Cicloturista</a>
+        </p>
+
         <form action="" method="get">
             {% csrf_token %}
             <table>
                 {{form.as_table}}
             </table>
             <button>Buscar</button>
-        <form> 
+        </form> 
             {% for cicloturista in cicloturistas %}
-            <li>{{cicloturista}}</li>
-            
+            <li>
+                <a href={% url "detalle_cicloturista" cicloturista.id %}>{{cicloturista}}</a>
+                <a href={% url "editar_cicloturista" cicloturista.id %}>Editar</a>
+                <a href={% url "borrar_cicloturista" cicloturista.id %}>Borrar</a>
+            </li>
             {% endfor %}
 {% endblock 'body_aeroBikes' %}

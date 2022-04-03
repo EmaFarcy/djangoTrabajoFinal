@@ -40,9 +40,24 @@
                 <strong>Bike Shop</strong>
               </a>
           </li>
+          {% if request.user.is_authenticated  %}
+
+            <li class="nav-item">
+              <a class="nav-link" href= {% url 'logout' %}>
+                <strong>Log Out</strong>
+              </a>
+            </li>          
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href= {% url 'login' %}>
+                <strong>Log In</strong>
+              </a>
+            </li>
+          {% endif %}
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <strong>Log In</strong>
+            <a class="nav-link" href= {% url 'registrarse' %}>
+              <strong>Registrarse</strong>
             </a>
         </li>
             <li class="nav-item">
@@ -52,13 +67,12 @@
             </li>
         </ul>
     </nav>
-
-
-    
-    
-    <h1 class="py-0 my-1 border-top">Aero Bikes
+    {% if msj %}
+        <h4>{{msj}}</h4> 
+    {% else %}    
+      <h1 class="py-0 my-1 border-top">Aero Bikes
     	<small>Shop</small>
-
+      {% endif %}
     </h1>
     <h2><i>Tienda oficial Specialized Bicycles</h2></i>
     </h2>

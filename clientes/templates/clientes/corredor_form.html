@@ -2,15 +2,15 @@
 
 {% block 'body_aeroBikes'  %}
         <p>
-            <a href={% url 'nosotros'%}>Volver</a>
-        </p>
-
-        <form action="" method="post">
+            <a href={% url 'lista_corredores'%}>Volver</a>
+        </p> 
+        <form action="" method='post'>
             {% csrf_token %}
             <table>
                 {{form.as_table}}
             </table>
-            <button>Crear</button>
-        </form> 
+            <button>Editar</button>
+        </form>
+
 
 {% endblock 'body_aeroBikes' %}

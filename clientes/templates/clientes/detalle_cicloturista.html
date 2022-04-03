@@ -1,0 +1,17 @@
+{% extends 'index/nosotros.html' %}
+
+{% block 'body_aeroBikes'  %}
+
+        <p>
+            <a href={% url 'lista_cicloturistas'%}>Volver</a>
+        </p>
+
+
+        <p>
+            <li>Nombre: {{cicloturista.nombre}}</li>
+            <li>Apellido: {{cicloturista.apellido}}</li>
+            <li>¿De Contado?: {{cicloturista.contado}}</li>
+        </p>
+
+
+{% endblock 'body_aeroBikes' %}

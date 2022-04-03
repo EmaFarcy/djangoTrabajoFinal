@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from .models import Cicloturista, Corredor, Ruta
 from .forms import CicloturistaFormulario, CicloturistaBusqueda, CorredorFormulario, CorredorBusqueda, RutaFormulario
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import UpdateView, DeleteView
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
+@login_required
 def crear_cicloturista(request):
     
     if request.method=='POST':
@@ -28,7 +33,7 @@ def lista_cicloturistas(request):
     form= CicloturistaBusqueda()
     return render(request, "clientes/lista_cicloturistas.html", {'form': form, "cicloturistas": cicloturistas})
 
-
+@login_required 
 def crear_corredor(request):
     
     if request.method=='POST':
@@ -65,3 +70,30 @@ def crear_ruta(request):
             return render(request, "index/index.html", {})
     form= RutaFormulario()
     return render(request, "clientes/crear_ruta.html", {'form': form})
+
+class DetalleCicloturista(DetailView):
+    model= Cicloturista
+    template_name= "clientes/detalle_cicloturista.html"
+
+class EditarCicloturista(LoginRequiredMixin, UpdateView):
+    model= Cicloturista
+    success_url= '/clientes/cicloturistas/'
+    fields= ['nombre', 'apellido', 'contado']
+
+class BorrarCicloturista(LoginRequiredMixin ,DeleteView):
+    model= Cicloturista
+    success_url= '/clientes/cicloturistas/'
+
+
+class DetalleCorredor(DetailView):
+    model= Corredor
+    template_name= "clientes/detalle_corredor.html"
+
+class EditarCorredor(LoginRequiredMixin, UpdateView):
+    model= Corredor
+    success_url= '/clientes/corredores/'
+    fields= ['nombre', 'apellido', 'equipo']
+
+class BorrarCorredor(LoginRequiredMixin, DeleteView):
+    model= Corredor
+    success_url= '/clientes/corredores/'

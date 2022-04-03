@@ -1,0 +1,17 @@
+{% extends 'index/nosotros.html' %}
+
+{% block 'body_aeroBikes'  %}
+
+        <p>
+            <a href={% url 'lista_corredores'%}>Volver</a>
+        </p>
+
+
+        <p>
+            <li>Nombre: {{corredor.nombre}}</li>
+            <li>Apellido: {{corredor.apellido}}</li>
+            <li>¿De Contado?: {{corredor.contado}}</li>
+        </p>
+
+
+{% endblock 'body_aeroBikes' %}

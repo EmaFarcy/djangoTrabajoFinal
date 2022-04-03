@@ -1,0 +1,15 @@
+{% extends 'index/nosotros.html' %}
+
+{% block 'body_aeroBikes'  %}
+
+        <p>
+            <a href={% url 'lista_corredores'%}>Volver</a>
+        </p> 
+
+        <form action="" method="post">
+            {% csrf_token %}
+          ¿Desea borrar el corredor{{object}}?
+            <button>Borrar</button>
+        </form> 
+
+{% endblock 'body_aeroBikes' %} 
