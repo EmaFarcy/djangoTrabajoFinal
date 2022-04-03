@@ -1,0 +1,16 @@
+{% extends 'index/nosotros.html' %}
+
+{% block 'body_aeroBikes'  %}
+        <p>
+            <a href={% url 'crear_ruta'%}>Volver</a>
+        </p> 
+        <form action="" method='post'>
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <button>Editar</button>
+        </form>
+
+
+{% endblock 'body_aeroBikes' %}

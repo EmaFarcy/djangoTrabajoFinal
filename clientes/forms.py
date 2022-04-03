@@ -1,4 +1,5 @@
 from django import forms
+from ckeditor.fields import RichTextFormField
 
 class CicloturistaFormulario(forms.Form):
     nombre = forms.CharField(max_length=20)
@@ -19,3 +20,4 @@ class CorredorBusqueda(forms.Form):
 class RutaFormulario(forms.Form):
      marca = forms.CharField(max_length=60)
      modelo = forms.CharField(max_length=60)
+     caracteristicas = RichTextFormField(required= False)

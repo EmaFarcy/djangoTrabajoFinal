@@ -41,7 +41,12 @@
               </a>
           </li>
           {% if request.user.is_authenticated  %}
-
+          
+            <li class="nav-item">
+              <a class="nav-link" href= {% url 'editar_usuario' %}>
+                  <strong>Editar</strong>
+              </a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href= {% url 'logout' %}>
                 <strong>Log Out</strong>
