@@ -12,8 +12,5 @@ urlpatterns = [
     path('corredores/<int:pk>',views.DetalleCorredor.as_view(), name="detalle_corredor"),
     path('corredores/<int:pk>/editar',views.EditarCorredor.as_view(), name="editar_corredor"),
     path('corredores/<int:pk>/borrar',views.BorrarCorredor.as_view(), name="borrar_corredor"),
-    
-    
-    
-    path('ruta/crear/',views.crear_ruta, name="crear_ruta")
+    path('ruta/crear/',views.crear_ruta, name="crear_ruta"),
 ]

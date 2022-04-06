@@ -30,6 +30,12 @@
                 </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href={% url 'about_us' %}>
+                <strong>Sobre Aero</strong>
+              </a>
+          </li>
+        </li>
+            <li class="nav-item">
                 <a class="nav-link" href={% url 'nosotros' %}>
                   <strong>Clientes</strong>
                 </a>
@@ -82,7 +88,7 @@
     <h2><i>Tienda oficial Specialized Bicycles</h2></i>
     </h2>
     <br>
-
+    {% block 'body_aeroBikes2' %}
     <img class="aero2" src={% static "index/img/aerobikes2.jpg"%}>
     <br>
     <br>
@@ -193,7 +199,7 @@
         <br>
         <img align="left" width="40%" class="aero6" src={% static "index/img/aerobikes6.jpg"%}><p>Los mejores mecánicos de Carlos Paz para el mantenimiento de tu bici.  Nos llena de orgullo poder ofrecerte lo mejor gracias a @specialized_arg.</p> 
     </div>
-
+    {% endblock 'body_aeroBikes2' %}
 
 <footer class="py-12 my-14 border-top">
     <ul class="nav col-md-12 justify-content-end">

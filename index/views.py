@@ -5,3 +5,6 @@ def index(request):
 
 def nosotros(request):
     return render(request, 'index/nosotros.html')
+
+def about_us(request):
+    return render(request, 'index/about_us.html')

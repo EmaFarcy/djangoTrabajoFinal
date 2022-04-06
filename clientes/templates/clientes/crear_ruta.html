@@ -3,11 +3,12 @@
 {% block 'body_aeroBikes'  %}
 <h5 class="productosRuta"> Ingresar producto: Bici de Ruta</h5>
 <br>
-        <form action="" method="post">
+       <form action="" method="post">
             {% csrf_token %}
             <table>
                 {{form.as_table}}
             </table>
             <button>Crear</button>
         </form> 
+
 {% endblock 'body_aeroBikes' %}
