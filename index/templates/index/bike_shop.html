@@ -1,0 +1,15 @@
+{% extends 'index/index.html' %}
+
+{% block 'body_aeroBikes2'  %}
+
+<p>
+    <a href={% url 'crear_ruta'%}>Volver</a>
+</p> 
+
+<p>
+    <li>Marca: {{object.marca}}</li>
+    <li>Modelo: {{object.modelo}}</li>
+    <li>Características: {{object.caracteristicas | safe }}</li>
+</p>
+
+{% endblock 'body_aeroBikes2' %}
