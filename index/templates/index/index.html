@@ -36,7 +36,7 @@
           </li>
         </li>
             <li class="nav-item">
-                <a class="nav-link" href={% url 'nosotros' %}>
+                <a class="nav-link" href={% url 'clientes' %}>
                   <strong>Clientes</strong>
                 </a>
             </li>
@@ -49,8 +49,9 @@
           {% if request.user.is_authenticated  %}
           
             <li class="nav-item">
-              <a class="nav-link" href= {% url 'editar_usuario' %}>
-                  <strong>Editar</strong>
+              <a class="nav-link" href= {% url 'usuario_datos' %}>
+                <img src="{{request.user.userextension.avatar.url}}" alt="" height='25px'>
+                  {{request.user.username}}
               </a>
             </li>
             <li class="nav-item">
@@ -71,11 +72,6 @@
               <strong>Registrarse</strong>
             </a>
         </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <strong>Contacto</strong>
-                </a>
-            </li>
         </ul>
     </nav>
     {% if msj %}
@@ -95,8 +91,8 @@
 
     <div style="text-align: center;">
     <button type="button" class="btn btn-dark" style="margin: 10px;"><a href= {% url 'crear_ruta'%} class="buttonRuta">Ruta</button></a>
-    <button type="button" class="btn btn-dark" style="margin: 10px;">Mtb</button>
-    <button type="button" class="btn btn-dark" style="margin: 10px;">Urbanas</button>
+    <button type="button" class="btn btn-dark" style="margin: 10px;"><a href= {% url 'crear_mtb'%} class="buttonRuta">Mtb</button></a>
+    <button type="button" class="btn btn-dark" style="margin: 10px;"><a href= {% url 'crear_urbana'%} class="buttonRuta">Urbanas</button></a>
     </div>
     <br>
  </div>
@@ -203,13 +199,12 @@
 
 <footer class="py-12 my-14 border-top">
     <ul class="nav col-md-12 justify-content-end">
-            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Inicio</a></li>
+            <li class="nav-item"><a href="#""  class="nav-link px-2 text-muted">Inicio</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Nosotros</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Shop</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact Us</a></li>
           </ul>
-      </ul>
-    
+      </ul>    
 </footer>
 </body>
 </html>

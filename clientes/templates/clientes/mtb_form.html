@@ -1,12 +1,16 @@
 {% extends 'index/clientes.html' %}
 
 {% block 'body_aeroBikes'  %}
-        <form action="" method="post">
+        <p>
+            <a class='buttonRuta' href={% url 'crear_mtb'%}>Volver</a>
+        </p> 
+        <form action="" method='post'>
             {% csrf_token %}
             <table>
                 {{form.as_table}}
             </table>
-            <button>Crear</button>
-        </form> 
+            <button>Editar</button>
+        </form>
+
 
 {% endblock 'body_aeroBikes' %}

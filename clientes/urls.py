@@ -13,4 +13,6 @@ urlpatterns = [
     path('corredores/<int:pk>/editar',views.EditarCorredor.as_view(), name="editar_corredor"),
     path('corredores/<int:pk>/borrar',views.BorrarCorredor.as_view(), name="borrar_corredor"),
     path('ruta/crear/',views.crear_ruta, name="crear_ruta"),
+    path('mtb/crear/',views.crear_mtb, name="crear_mtb"),
+    path('urbana/crear/',views.crear_urbana, name="crear_urbana"),
 ]

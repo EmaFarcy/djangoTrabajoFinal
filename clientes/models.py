@@ -1,5 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from django.utils import timezone
 
 # Create your models here.
 
@@ -23,7 +25,29 @@ class Corredor(models.Model):
 class Ruta(models.Model):
      marca = models.CharField(max_length=60)
      modelo = models.CharField(max_length=60)
-     caracteristicas= RichTextField(null=True, blank=True)
+     caracteristicas= RichTextField(blank=True, null=True)
+     imagen_ruta = models.ImageField(blank= True, null= True)
+     fecha_creacion = models.DateTimeField(default=timezone.now)
      
      def __str__(self):
-        return f' {self.marca} {self.modelo}'   
+        return f' {self.marca} {self.modelo}'
+
+class Mtb(models.Model):
+     marca = models.CharField(max_length=60)
+     modelo = models.CharField(max_length=60)
+     caracteristicas= RichTextField(blank=True, null=True)
+     imagen_mtb = models.ImageField(blank= True, null= True)
+     fecha_creacion = models.DateTimeField(default=timezone.now)
+     
+     def __str__(self):
+        return f' {self.marca} {self.modelo}'
+    
+class Urbana(models.Model):
+     marca = models.CharField(max_length=60)
+     modelo = models.CharField(max_length=60)
+     caracteristicas= RichTextField(blank=True, null=True)
+     imagen_urbana = models.ImageField(blank= True, null= True)
+     fecha_creacion = models.DateTimeField(default=timezone.now)
+     
+     def __str__(self):
+        return f' {self.marca} {self.modelo}'      

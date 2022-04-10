@@ -21,3 +21,16 @@ class RutaFormulario(forms.Form):
      marca = forms.CharField(max_length=60)
      modelo = forms.CharField(max_length=60)
      caracteristicas = RichTextFormField(required= False)
+     imagen_ruta= forms.ImageField(required= False)
+
+class MtbFormulario(forms.Form):
+     marca = forms.CharField(max_length=60)
+     modelo = forms.CharField(max_length=60)
+     caracteristicas = RichTextFormField(required= False)
+     imagen_mtb= forms.ImageField(required= False)
+
+class UrbanaFormulario(forms.Form):
+     marca = forms.CharField(max_length=60)
+     modelo = forms.CharField(max_length=60)
+     caracteristicas = RichTextFormField(required= False)
+     imagen_urbana= forms.ImageField(required= False)

@@ -1,13 +1,13 @@
-{% extends 'index/nosotros.html' %}
+{% extends 'index/clientes.html' %}
 
 {% block 'body_aeroBikes'  %}
 
         <p>
-            <a href={% url 'nosotros'%}>Volver</a>
+            <a class='buttonRuta' href={% url 'clientes'%}>Volver</a>
         </p>
 
         <p>
-            <a href={% url 'crear_corredor'%}>Crear Corredor</a>
+            <a class='buttonRuta' href={% url 'crear_corredor'%}>Crear Corredor</a>
         </p>
 
         <form action="" method="get">
@@ -19,9 +19,9 @@
         </form> 
             {% for corredor in corredores %}
             <li>
-                <a href={% url "detalle_corredor" corredor.id %}>{{corredor}}</a>
-                <a href={% url "editar_corredor" corredor.id %}>Editar</a>
-                <a href={% url "borrar_corredor" corredor.id %}>Borrar</a>
+                <a class='buttonRuta' href={% url "detalle_corredor" corredor.id %}>{{corredor}}</a>
+                <a class='buttonRuta' href={% url "editar_corredor" corredor.id %}>Editar</a>
+                <a class='buttonRuta' href={% url "borrar_corredor" corredor.id %}>Borrar</a>
             </li>
             {% endfor %}
 {% endblock 'body_aeroBikes' %}

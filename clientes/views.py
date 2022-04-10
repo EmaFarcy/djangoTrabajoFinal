@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Cicloturista, Corredor, Ruta
-from .forms import CicloturistaFormulario, CicloturistaBusqueda, CorredorFormulario, CorredorBusqueda, RutaFormulario
+from .models import Cicloturista, Corredor, Ruta, Mtb, Urbana
+from .forms import CicloturistaFormulario, CicloturistaBusqueda, CorredorFormulario, CorredorBusqueda, RutaFormulario, MtbFormulario, UrbanaFormulario
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import UpdateView, DeleteView
 from django.contrib.auth.decorators import login_required
@@ -65,11 +65,37 @@ def crear_ruta(request):
         form= RutaFormulario(request.POST)
         if form.is_valid():
             data= form.cleaned_data
-            ruta= Ruta(marca= data['marca'], modelo=data['modelo'])
+            ruta= Ruta(marca= data['marca'], modelo=data['modelo'], caracteristicas=data['caracteristicas'])
             ruta.save()
             return render(request, "index/index.html", {})
     form= RutaFormulario()
     return render(request, "clientes/crear_ruta.html", {'form': form})
+
+def crear_mtb(request):
+    if request.method=='POST':
+        form= MtbFormulario(request.POST)
+        if form.is_valid():
+            data= form.cleaned_data
+            mtb= Mtb(marca= data['marca'], modelo=data['modelo'], caracteristicas=data['caracteristicas'])
+            mtb.save()
+            return render(request, "index/index.html", {})
+    form= MtbFormulario()
+    return render(request, "clientes/crear_mtb.html", {'form': form})
+
+def crear_urbana(request):
+    if request.method=='POST':
+        form= UrbanaFormulario(request.POST)
+        if form.is_valid():
+            data= form.cleaned_data
+            urbana= Urbana(marca= data['marca'], modelo=data['modelo'], caracteristicas=data['caracteristicas'])
+            urbana.save()
+            return render(request, "index/index.html", {})
+    form= UrbanaFormulario()
+    return render(request, "clientes/crear_urbanas.html", {'form': form})
+
+
+
+
 
 class DetalleCicloturista(DetailView):
     model= Cicloturista

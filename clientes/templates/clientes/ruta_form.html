@@ -1,8 +1,8 @@
-{% extends 'index/nosotros.html' %}
+{% extends 'index/clientes.html' %}
 
 {% block 'body_aeroBikes'  %}
         <p>
-            <a href={% url 'crear_ruta'%}>Volver</a>
+            <a class='buttonRuta' href={% url 'crear_ruta'%}>Volver</a>
         </p> 
         <form action="" method='post'>
             {% csrf_token %}

@@ -1,9 +1,12 @@
 {% extends 'index/clientes.html' %}
 
 {% block 'body_aeroBikes'  %}
-        <form action="" method="post">
+<h5 class="productosRuta"> Ingresar producto: Bici Urbana</h5>
+<br>
+       <form action="" method="post">
             {% csrf_token %}
             <table>
+                {{form.media}}
                 {{form.as_table}}
             </table>
             <button>Crear</button>

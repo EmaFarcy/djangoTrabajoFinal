@@ -3,13 +3,14 @@
 {% block 'body_aeroBikes2'  %}
 
 <p>
-    <a href={% url 'crear_ruta'%}>Volver</a>
+    <a class="productosRuta" href={% url 'index'%}>Volver</a>
 </p> 
 
 <p>
-    <li>Marca: {{object.marca}}</li>
-    <li>Modelo: {{object.modelo}}</li>
-    <li>Características: {{object.caracteristicas | safe }}</li>
+    <li>Marca: {{crear_ruta.marca}}</li>
+    <li>Modelo: {{crear_ruta.modelo}}</li>
+    <li>Características: {{crear_ruta.caracteristicas | safe }}</li>
+    <li>Fecha creación: {{ruta.fecha_creacion}}</li>
 </p>
 
 {% endblock 'body_aeroBikes2' %}
