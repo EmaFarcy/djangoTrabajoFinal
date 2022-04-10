@@ -15,10 +15,12 @@
 	      <link href= {% static 'index/css/style.css' %} rel="stylesheet">
 	      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap" rel="stylesheet">
+        <link href= {% static 'index/css/estilos.css' %} rel="stylesheet">
         <script src="https://kit.fontawesome.com/7e2bf41c0a.js" crossorigin="anonymous"></script>
         <title>Aero Bikes</title>
 	</head>
 	<body>
+    <script src= {% static 'index/js/script.js' %}></script>
     <div class="container-md"  style="background-color: #828282;">
 		<nav class="navbar navbar-expand-sm bg-secondary.bg-gradient">
 			<a class="navbar-left" href= {% url 'index' %}><img class="aero" src= {% static "index/img/aerobikes.jpg"%}></a>
@@ -88,7 +90,6 @@
     <img class="aero2" src={% static "index/img/aerobikes2.jpg"%}>
     <br>
     <br>
-
     <div style="text-align: center;">
     <button type="button" class="btn btn-dark" style="margin: 10px;"><a href= {% url 'crear_ruta'%} class="buttonRuta">Ruta</button></a>
     <button type="button" class="btn btn-dark" style="margin: 10px;"><a href= {% url 'crear_mtb'%} class="buttonRuta">Mtb</button></a>
@@ -104,10 +105,11 @@
         <i class="fas fa-map-marked-alt"></i>
     </div>
       <h3 style="text-align:center;"><small><strong>Tienda</strong></small></h3>
-      <p align="center">En nuestros local de la ciudad de Villa Carlos Paz podés encontrar toda la colección de bicicletas Specialized y elegir la tuya.</p>
-      <br>
+      <p align="center">En nuestros local de la ciudad de Villa Carlos Paz podés encontrar toda la colección de bicicletas Specialized y elegir la tuya. Somos tienda oficial. </p>
+      <span id="dots"></span></p><p align="center"><span id="more">Encontrá la bicicleta perfecta para vos. Descubrí todos los modelos que tenemos para vos. 
+        Descubrí nuestras bicicletas en promoción. Recibimos tarjetas. Múltiples métodos de pago y financiación.</span></p>
       <div style="text-align: center;">
-      <button type="button" class="btn btn-info">Leer más</button>
+      <button onclick="myFunction()" type="button" class="btn btn-info" id="myBtn">Leer más</button>
       </div>
     </div>
     <div class="col">
@@ -116,11 +118,12 @@
             <i class="fas fa-tshirt"></i>
             </div>
       <h3 style="text-align:center;"><small><strong>Indumentaria</strong></small></h3>
-      <p align="center">Encontrá la mejor indumentaria de ciclismo de las principales marcas de Argentina.</p>
-      <br>
+      <p align="center">Encontrá la mejor indumentaria de ciclismo de las principales marcas de Argentina. Todas las prendas en calidad premium.</p>
+      <span id="dots2"></span></p><p align="center"><span id="more2">Vestimos el ciclismo con la elegancia que se merece. Calidad premium para todo el team Confort, durabilidad, tecnología. 
+        Consultá por nuestros medios de pago y por las nuevas colecciones según las estaciones.</span></p>
       <br>
       <div style="text-align: center;">
-      <button type="button" class="btn btn-info">Leer más</button>
+        <button onclick="myFunction2()" type="button" class="btn btn-info" id="myBtn2">Leer más</button>
       </div>
     </div>
     <div class="col">
@@ -129,11 +132,12 @@
             <i class="fas fa-file-alt"></i>
           </div>  
       <h3 style="text-align:center;"><small><strong>Novedades</strong></small></h3>
-      <p align="center">Recibí por correo toda la info actualizada de nuevos ingresos y consejos para cuidar tu bicicleta.</p>
-      <br>
+      <p align="center">Recibí por correo toda la info actualizada de nuevos ingresos y consejos para cuidar tu bicicleta con productos de calidad</p>
+      <span id="dots3"></span></p><p align="center"><span id="more3">Completá el formulario en nuestra sección de contactos y recibirás todos los meses las nuevas noveades sobre bicicletas Specialized. 
+        A su vez, podés participar de sorteos de indumentaria y recibir las mejores promociones.</span></p>
       <br>
       <div style="text-align: center;">
-      <button type="button" class="btn btn-info">Leer más</button>
+        <button onclick="myFunction3()" type="button" class="btn btn-info" id="myBtn3">Leer más</button>
       </div>
     </div>
     <div class="col">
@@ -141,11 +145,12 @@
         <div style="text-align: center;">
             <i class="fas fa-users"></i>
       <h3 style="text-align:center;"><small><strong>Staff</strong></small></h3>
-      <p align="center">Conocé a nuestros asesores especializados y formados por Specialized Argentina.</p>
-      <br>
+      <p align="center">Conocé a nuestros asesores y mecánicos  formados en los cursos anuales dictados por Specialized Argentina.</p>
+      <span id="dots4"></span></p><p align="center"><span id="more4">Nuestra política es mantener estándares de calidad en cuanto a formación y conocimientos de nuestro staff. 
+        Por estas razones, participamos de forma permanente de los cursos de mecánica y productos realizados por Specialized Argentina.</span></p>
       <br>
       <div style="text-align: center;">
-      <button type="button" class="btn btn-info">Leer más</button>
+        <button onclick="myFunction4()" type="button" class="btn btn-info" id="myBtn4">Leer más</button>
     </div>
     </div>
     <br>
@@ -153,7 +158,6 @@
     <div class="container" style="background-color:white;">
   <div class="row align-items-start">
     <div class="col">
-        <br>
     <br>
       <h5 align="center"><strong>Specialized en el circuito profesional</strong></h5>
       <p align="center">Actualmente, el Bora-Hansgrohe y el Quick-Step Floors utilizan el modelo S-Works en el circuito UCI Pro Tour. El modelo S-Works es uno de los más buscados por los equipos profesionales.</p>
