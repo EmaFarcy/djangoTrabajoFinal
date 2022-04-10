@@ -26,11 +26,11 @@ class Ruta(models.Model):
      marca = models.CharField(max_length=60)
      modelo = models.CharField(max_length=60)
      caracteristicas= RichTextField(blank=True, null=True)
-     imagen_ruta = models.ImageField(upload_to='bikes/', blank= True, null= True)
+     imagen_ruta= models.ImageField(upload_to='bikes/', blank= True, null= True)
      fecha_creacion = models.DateTimeField(default=timezone.now)
      
      def __str__(self):
-        return f' {self.marca} {self.modelo}'
+        return f' {self.marca} {self.modelo} {self.imagen_ruta}'
 
 class Mtb(models.Model):
      marca = models.CharField(max_length=60)

@@ -13,3 +13,9 @@
 #more4 {
     display: none;
 }
+
+.forms {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}

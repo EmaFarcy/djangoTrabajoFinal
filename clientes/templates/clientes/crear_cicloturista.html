@@ -5,12 +5,12 @@
             <a class='buttonRuta' href={% url 'clientes'%}>Volver</a>
         </p>
 
-        <form action="" method="post">
+        <form class="forms" action="" method="post">
             {% csrf_token %}
             <table>
                 {{form.as_table}}
             </table>
-            <button>Crear</button>
+            <button class="btn btn-info">Crear</button>
         </form> 
 
 {% endblock 'body_aeroBikes' %}

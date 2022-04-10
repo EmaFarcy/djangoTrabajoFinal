@@ -4,7 +4,7 @@
         <p>
             <a class='buttonRuta' href={% url 'crear_ruta'%}>Volver</a>
         </p> 
-        <form action="" method='post'>
+        <form action="" method='post' enctype='multipart/form-data'>
             {% csrf_token %}
             <table>
                 {{form.as_table}}

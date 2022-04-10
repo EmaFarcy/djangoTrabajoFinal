@@ -1,5 +1,4 @@
 {% extends 'index/index.html' %}
-{% load static %}
 
 {% block 'body_aeroBikes2'  %}
 
@@ -12,7 +11,7 @@
     <li>Marca: {{ruta.marca}}</li>
     <li>Modelo: {{ruta.modelo}}</li>
     <li>Características: {{ruta.caracteristicas | safe }}</li>
-    <li>Imagen: <img src="{{ ruta.imagen_ruta.url}}" alt="Imagen del producto"></li>
+    <li>Imagen: <img src="{{clientes.ruta.imagen_ruta.url}}" alt="Imagen del producto"></li>
     <li>Fecha creación: {{ruta.fecha_creacion}}</li>
 </p>
 

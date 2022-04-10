@@ -94,9 +94,6 @@ def crear_urbana(request):
     return render(request, "clientes/crear_urbanas.html", {'form': form})
 
 
-
-
-
 class DetalleCicloturista(DetailView):
     model= Cicloturista
     template_name= "clientes/detalle_cicloturista.html"
