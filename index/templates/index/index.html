@@ -52,8 +52,12 @@
           
             <li class="nav-item">
               <a class="nav-link" href= {% url 'usuario_datos' %}>
-                <img src="{{request.user.userextension.avatar.url}}" alt="" height='25px'>
+                {% if request.user.userextension.avatar  %}
+                <img src="{{request.user.userextension.avatar.url}}" alt="imagen de perfil" height='25px'>
                   {{request.user.username}}
+                  {% else %}
+                  {{request.user.username}}
+                  {% endif %}
               </a>
             </li>
             <li class="nav-item">

@@ -51,26 +51,41 @@ def editar_usuario(request):
     user_extension_logued, _ = UserExtension.objects.get_or_create(user=request.user)
     
     if request.method== 'POST':
-            form= EditFullUser(request.POST, request.FILES)
+        form= EditFullUser(request.POST, request.FILES)  
+        if form.is_valid():
             
-            if form.is_valid():
+            data = form.cleaned_data
+            request.user.email = data.get('email',)
+            request.user.first_name = data.get('first_name')
+            request.user.last_name = data.get('last_name', '')      
+            
+            avatar = data.get('avatar', '')
+            if avatar is not None:
+                if avatar is False:
+                    user_extension_logued.avatar = None
+                else:
+                    user_extension_logued.avatar = data.get('avatar')
+            user_extension_logued.link = data.get('link', '')
+            user_extension_logued.more_description = data.get('more_description','')
+                
+                
                
-               request.user.email = form.cleaned_data['email']
-               request.user.first_name = form.cleaned_data['first_name']
-               request.user.last_name = form.cleaned_data['last_name']
-               user_extension_logued.avatar= form.cleaned_data['avatar']
-               user_extension_logued.link = form.cleaned_data['link']
-               user_extension_logued.more_description = form.cleaned_data['more_description']
+            #    request.user.email = form.cleaned_data['email']
+            #    request.user.first_name = form.cleaned_data['first_name']
+            #    request.user.last_name = form.cleaned_data['last_name']
+            #    user_extension_logued.avatar= form.cleaned_data['avatar']
+            #    user_extension_logued.link = form.cleaned_data['link']
+            #    user_extension_logued.more_description = form.cleaned_data['more_description']
                
-               if form.cleaned_data['password1'] != '' and form.cleaned_data ['password1'] == form.cleaned_data['password2']:
-                   request.user.set_password(form.cleaned_data['password1'])
+            if form.cleaned_data['password1'] != '' and form.cleaned_data ['password1'] == form.cleaned_data['password2']:
+                request.user.set_password(form.cleaned_data['password1'])
            
-               request.user.save()
-               user_extension_logued.save()
+            request.user.save()
+            user_extension_logued.save()
                
-               return redirect('index')
-            else:
-                return render(request, 'accounts/editar_usuario.html', {'form': form, 'msj': 'El formulario no es válido'})
+            return redirect('index')
+        else:
+            return render(request, 'accounts/editar_usuario.html', {'form': form, 'msj': 'El formulario no es válido'})
             
     form= EditFullUser(
         initial={

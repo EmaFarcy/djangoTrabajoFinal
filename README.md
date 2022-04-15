@@ -1,8 +1,6 @@
 El siguiente sitio/blog corresponde a una empresa e-commerce dedicada a la venta y comercialización de bicicletas de ruta, mtb y urbanas. Además, se especializa en la venta de indumentaria deportiva y otros insumos para el ciclista. 
 
-
-usuario:Lema
-contraseña: Celeste2019
+Apps: Accounts, Clientes, Index
 
 En primer lugar tenemos nuestra portada (index.html) donde encontramos los botones de "Inicio" "Sobre Aero" "Clientes" "Bike Shop" "Log In" "Registrarse". 
 .Nuestra home posee una navbar, logo (dirige hacia la home), Títulos, Subtítulos, texto e imágenes, íconos y un video (ubicado casi al final). 
@@ -34,5 +32,10 @@ En esta sección podemos generar un nuevo usuario. Tendremos que llenar los sigu
 Luego nos figura el usuario y podemos hacer la edición ingresando una imagen avatar.
 
 -RUTA
-Haciendo click en el botón Ruta (debajo de nuestra imagen de portada) podemos efectuar la carga (o posteos) de nuestros productos de bicicletas de ruta para luego ser visualizadas en la sección "Bike Shop". Aquí podemos ingresar "Marca", "Modelo",  
+Haciendo click en el botón Ruta (debajo de nuestra imagen de portada) podemos efectuar la carga (o posteos) de nuestros productos de bicicletas de ruta para luego ser visualizadas en la sección "Bike Shop". Aquí podemos ingresar "Marca", "Modelo", "Características" a "Imagen" del producto. Cabe destacar que en características podemos utilizar la opción del texto enriquecido. 
 
+-MTB
+Haciendo click en el botón MTB (debajo de nuestra imagen de portada) podemos efectuar la carga (o posteos) de nuestros productos de bicicletas de mtb. Cabe destacar que por el momento no se visualizan en la sección "Bike Shop".
+
+-Urbanas
+Haciendo click en el botón Urbanas (debajo de nuestra imagen de portada) podemos efectuar la carga (o posteos) de nuestros productos de bicicletas urbanas. Cabe destacar que por el momento no se visualizan en la sección "Bike Shop".

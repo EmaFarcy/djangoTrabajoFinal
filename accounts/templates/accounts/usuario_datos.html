@@ -11,10 +11,11 @@
         <li>{{request.user.first_name}}</li>
         <li>{{request.user.last_name}}</li>
         <li>{{request.user.email}}</li>
+        {% if request.user.userextension.avatar  %}
         <li><img src="{{request.user.userextension.avatar.url}}" alt="imagen de perfil"></li>
+        {% endif %}
         <li>{{request.user.userextension.link}}</li>
     </p>
-
     <a class='buttonRuta' href={% url 'editar_usuario' %}>Editar Usuario</a>
 
 
