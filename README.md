@@ -1,5 +1,10 @@
 El siguiente sitio/blog corresponde a una empresa e-commerce dedicada a la venta y comercialización de bicicletas de ruta, mtb y urbanas. Además, se especializa en la venta de indumentaria deportiva y otros insumos para el ciclista. 
 
+-Formulario de testing: https://docs.google.com/spreadsheets/d/1LCy-OSjWOo9pGgwBh1yPQi0pg_kA3GF2DBHaIlQfYYg/edit?usp=sharing
+
+-Video explicativo: https://drive.google.com/file/d/1IKJMdrYkLXP3yYjVVMPJ_UQ8JpWFzQ7E/view?usp=sharing
+
+
 Apps: Accounts, Clientes, Index
 
 En primer lugar tenemos nuestra portada (index.html) donde encontramos los botones de "Inicio" "Sobre Aero" "Clientes" "Bike Shop" "Log In" "Registrarse". 
