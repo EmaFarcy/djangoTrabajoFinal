@@ -16,10 +16,11 @@ def crear_cicloturista(request):
             data= form.cleaned_data
             cicloturista= Cicloturista(nombre= data['nombre'], apellido=data['apellido'], contado= data['contado']) 
             cicloturista.save()
-            return render(request, "index/nosotros.html", {})
+            return render(request, "index/clientes.html", {})
         
     form= CicloturistaFormulario()
     return render (request, "clientes/crear_cicloturista.html", {'form': form})
+
 
 def lista_cicloturistas(request):
     
@@ -43,7 +44,7 @@ def crear_corredor(request):
             data= form.cleaned_data
             corredor= Corredor(nombre= data['nombre'], apellido=data['apellido'], equipo= data['equipo']) 
             corredor.save()
-            return render(request, "index/nosotros.html", {})
+            return render(request, "index/clientes.html", {})
         
     form= CorredorFormulario()
     return render (request, "clientes/crear_corredor.html", {'form': form})
@@ -62,10 +63,10 @@ def lista_corredores(request):
 
 def crear_ruta(request):
     if request.method=='POST':
-        form= RutaFormulario(request.POST)
+        form= RutaFormulario(request.POST, request.FILES)
         if form.is_valid():
             data= form.cleaned_data
-            ruta= Ruta(marca= data['marca'], modelo=data['modelo'], caracteristicas=data['caracteristicas'])
+            ruta= Ruta(marca= data['marca'], modelo=data['modelo'], caracteristicas=data['caracteristicas'], imagen_ruta=data['imagen_ruta'])
             ruta.save()
             return render(request, "index/index.html", {})
     form= RutaFormulario()

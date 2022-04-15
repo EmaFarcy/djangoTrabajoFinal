@@ -11,6 +11,6 @@ def about_us(request):
     return render(request, 'index/about_us.html')
 
 def bike_shop(request):
-    ruta = Ruta.objects.all()
-    return render(request, 'index/bike_shop.html', {'ruta':ruta})
+    bici_ruta = Ruta.objects.all()
+    return render(request, 'index/bike_shop.html', {'bici_ruta':bici_ruta})
 

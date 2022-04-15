@@ -8,6 +8,7 @@
             {% csrf_token %}
             <table>
                 {{form.as_table}}
+                {{form.media}}
             </table>
             <button class="btn btn-info">Editar</button>
         </form>
